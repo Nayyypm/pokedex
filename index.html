@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+
+    <link href="./css/estilos.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="primeira_div">
+        <img src="imagens/logo_final.png" class="logo_final">
+        
+       
+        </div>
+      
+    </header>
+    <div class="segunda_div"></div>
+    <div class="terceira_div">
+
+        <div>
+        <img src="imagens/ico_pokedex 1.png" class="icone_pokedex"><h5 id="totalRegistros"></h5>
+        </div>
+
+        <div class="qual_pokemon">
+        <p>Qual é esse Pokemon?</p>
+        </div>
+    <input type="text" id="barra_pesquisa" class="form-control" value="pesquise aqui" ></input>
+    <div class="lupa"> <img src="/imagens/lupa.png">   </div>
+    <ul id="listaPokemons" class="pokemon-list"></ul>
+    
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const barraPesquisa = document.getElementById("barra_pesquisa");
+
+            barraPesquisa.addEventListener("focus", function() {
+                if (this.value === "pesquise aqui") {
+                    this.value = "";
+                }
+            });
+
+            barraPesquisa.addEventListener("blur", function() {
+                if (this.value === "") {
+                    this.value = "pesquise aqui";
+                }
+            });
+        });
+    </script>
+
+    
+<main>
+
+    <div class="container">
+        <ul id="listaPokemons"></ul>
+    </div>
+
+</main>
+
+
+
+
+
+<script src="js/scripts.js"></script>
+</body>
+
+
+
+
+<footer>
+ <div class="rodape">
+    <p class="desenvolvido  ">Desenvolvido por: Lara e Nayara</p>
+
+ </div>
+</footer>
+
+</html>
+
